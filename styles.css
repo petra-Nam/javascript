@@ -1,0 +1,21 @@
+/* styles.css */
+
+
+/* Set the font family for the entire document */
+body {
+    font-family: 'Maven Pro', sans-serif;
+    }
+    
+    
+    /* Style headings */
+    h1 {
+    font-size: 2rem;
+    color: #007bff;
+    }
+    
+    
+    /* Style paragraphs */
+    p {
+    font-size: 1rem;
+    color: #ff0000;
+    }

@@ -1,0 +1,25 @@
+/*style.css*/
+
+h1 {
+    font-size: 36px;
+    color: #0000ff;
+    }
+    p {
+        font-size :18px;
+        color: #ffff00;
+    }
+    ul {
+        margin: 20px 30px 20px 30px;
+        }
+        ul {
+            padding: 10px 15px 10px 15px;
+            }
+            .highlight {
+                font-size: 36px;
+                color: #ffff00;
+            }
+            #important{
+                font-size: 25px;
+                color: beige;
+                font-weight: 400;
+            }
