@@ -52,9 +52,9 @@
         /* Packages Section */
         .packages {
             display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
             margin-top: 30px;
         }
 
@@ -63,35 +63,55 @@
             border: 1px solid var(--border-color);
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            padding: 20px;
+            width: 80%;
+            max-width: 800px;
             display: flex;
-            flex-direction: column;
             align-items: center;
+            padding: 20px;
+            gap: 20px;
             transition: transform 0.2s ease-in-out;
         }
 
         .package:hover {
-            transform: scale(1.05);
+            transform: scale(1.02);
+        }
+
+        .package:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .package:nth-child(even) {
+            flex-direction: row-reverse;
         }
 
         .package-img {
-            width: 100%;
-            height: 200px;
-            object-fit: contain;
+            width: 50%;
+            height: auto;
+            object-fit: cover;
             border-radius: 10px;
-            margin-bottom: 20px;
         }
 
         .package-description {
-            font-size: 1rem;
-            margin-bottom: 10px;
+            width: 50%;
+            text-align: left;
         }
 
         .package-price {
             font-size: 1.2rem;
             font-weight: bold;
             color: var(--accent-color);
+            margin-top: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .package {
+                flex-direction: column !important;
+                text-align: center;
+            }
+            .package-img, .package-description {
+                width: 100%;
+            }
         }
 
     </style>
@@ -109,40 +129,36 @@
         <h1>Photography Packages</h1>
         
         <div class="packages">
-            <!-- Package 1 -->
+            <!-- Package 1 (Image Right) -->
             <div class="package">
-                <img src="image1.png" alt="Package 1" class="package-img">
                 <div class="package-description">
                     <h2>Basic Package</h2>
                     <p>Perfect for solo photoshoots or small events. Includes a 1-hour shoot and 20 edited photos.</p>
+                    <div class="package-price">€300</div>
                 </div>
-                <div class="package-price">€300</div>
+                <img src="/assets/Famil_Package.png" alt="Basic Package" class="package-img">
             </div>
 
-            <!-- Package 2 -->
+            <!-- Package 2 (Image Left) -->
             <div class="package">
-                <img src="image2.png" alt="Package 2" class="package-img">
                 <div class="package-description">
                     <h2>Standard Package</h2>
                     <p>Ideal for couples or small groups. Includes a 2-hour shoot, 50 edited photos, and a personalized album.</p>
+                    <div class="package-price">€500</div>
                 </div>
-                <div class="package-price">€500</div>
+                <img src="image2.png" alt="Standard Package" class="package-img">
             </div>
 
-            <!-- Package 3 -->
+            <!-- Package 3 (Image Right) -->
             <div class="package">
-                <img src="image3.png" alt="Package 3" class="package-img">
                 <div class="package-description">
                     <h2>Premium Package</h2>
-                    <p>Tailored to your unique travel photography needs
-                        Flexible number of locations or days
-                        Can include candid shots, cultural immersion photos, or specific themes (e.g., wildlife, adventure, etc.)
-                        All digital photos with high-quality edits.</p>
+                    <p>Tailored to your unique travel photography needs. Flexible number of locations or days. Can include candid shots, cultural immersion photos, or specific themes.</p>
+                    <div class="package-price">€900</div>
                 </div>
-                <div class="package-price">€900</div>
+                <img src="image3.png" alt="Premium Package" class="package-img">
             </div>
 
-            <!-- Add more packages as needed -->
         </div>
 
         <div class="footer">
